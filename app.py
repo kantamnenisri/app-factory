@@ -53,6 +53,10 @@ def index():
 def health():
     return {'status': 'UP'}
 
+@app.route('/ping')
+def ping():
+    return 'OK'
+
 @app.route('/create', methods=['POST'])
 def create():
     try:
